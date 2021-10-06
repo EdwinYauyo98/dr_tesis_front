@@ -1,33 +1,6 @@
-
-import React, { useState } from 'react';
 import student from "../../assets/imgs/Form_student.png";
 import './Form.scss'
-import Pdf from "../../components/Pdf/Pdf";
 export default function Cotizacion(props) {
-
-
-    function generateJson() {
-
-        // const formValues = {
-        //     name: document.getElementById("name").value,
-        //     lastName: document.getElementById("lastname").value,
-        //     email: document.getElementById("email").value,
-        //     phone: document.getElementById("phone").value,
-        //     country: document.getElementById("country").value,
-        //     request: document.getElementById("request").value,
-        //     carreer: document.getElementById("carreer").value,
-        //     university: document.getElementById("university").value,
-        //     monthDiscount: document.getElementById("monthDiscount").value,
-        //     discountCode: document.getElementById("discountCode").value,
-        //     time: document.getElementById("time").value,
-        //     structure: document.getElementById("structure").value,
-        //     details: document.getElementById("details").value
-        // }
-
-
-
-    }
-    // const returnPdf = Pdf(data);
     return (
 
         <div className="form-block">
@@ -175,7 +148,7 @@ export default function Cotizacion(props) {
 
                     </div>
                     <div className="row-center">
-                        <button className="boton" onClick={generateJson}>
+                        <button className="boton" onClick={props.openModal}>
                             <h3 className="text">Enviar</h3>
                         </button>
                     </div>

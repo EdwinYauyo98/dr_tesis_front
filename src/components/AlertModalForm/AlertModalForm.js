@@ -1,8 +1,5 @@
-import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import './AlertModalForm.scss';
 export default function AlertModalForm(props) {
-    const [modalIsOpen, setModalIsOpen] = useState(true)
     return (
         
         <div className="Alert-modal-container">
@@ -10,7 +7,7 @@ export default function AlertModalForm(props) {
                 <div className='Alert-modal'>
                     <div className='Box-Modal'>
                     <div className='Button-Modal'>
-                            <button onClick={() => setModalIsOpen(false)}>cerrar</button>
+                            <button onClick={props.closeModal}>cerrar</button>
                         </div>
                         <div className='title-Modal'>
                             <h1>¡HOLA!</h1>

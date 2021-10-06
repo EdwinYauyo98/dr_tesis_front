@@ -13,6 +13,7 @@ import FooterData from "./components/Footer/FooterData.json";
 
 import LangModal from "./components/LangModal/LangModal";
 import LangModalJSON from './components/LangModal/LangModal.json';
+import AlertModalForm from "./components/AlertModalForm/AlertModalForm";
 import { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import ToolsLaders from "./components/ToolsLadders/ToolsLaders";
@@ -31,6 +32,8 @@ import CotizacionModal from '../src/components/CotizacionModal/CotizacionModal'
 function App() {
   const [openLangModal, setOpenLangModal] = useState(false);
   const [openCotModal, setOpenCotModal] = useState(false);
+  const [openAlertCot, setopenAlertCot] = useState(false);
+
   const [count, setCount] = useState(0);
 
   function OpenLangModal() {
@@ -44,6 +47,10 @@ function App() {
   function CloseCotModal() {
     setOpenCotModal(false);
 
+  }
+
+  function CloseAlertCotModal(){
+    setopenAlertCot(false);
   }
 
   useEffect(() => {
@@ -96,7 +103,7 @@ function App() {
 
         <Route path="/form" exact>
           <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
-          <Cotizacion />
+          <Cotizacion openModal={()=>{setopenAlertCot(true)}}/>
           <ToolsLaders hb='500' hh='200' />
         </Route>
 
@@ -107,7 +114,8 @@ function App() {
           <Footer data={FooterData} />
         </Route>
 
-        {/* {openCotModal && <CotizacionModal closeModal={CloseCotModal} />} */}
+        {openCotModal && <CotizacionModal closeModal={CloseCotModal} />}
+        {openAlertCot && <AlertModalForm closeModal={CloseAlertCotModal} />}
 
         {openLangModal && <LangModal modalAction={OpenLangModal} data={LangModalJSON} />}
       </div>
