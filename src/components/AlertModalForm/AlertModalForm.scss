@@ -1,4 +1,4 @@
-.Alert-modal-container{
+.Alert-modal-container {
     position: fixed;
     top: 0;
     width: 100%;
@@ -8,15 +8,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    .Alet-modal-background{
+
+    .Alet-modal-background {
         width: 100%;
         height: auto;
 
-        .Alert-modal{
+        .Alert-modal {
             display: flex;
             flex-direction: row;
-            .Box-Modal{
+            .Box-Modal {
                 display: flex;
                 flex-direction: column;
                 color: #ffffff;
@@ -26,20 +26,38 @@
                 width: 40%;
                 box-shadow: 10px lightcoral;
                 .title-Modal {
-                    
+                    display: flex;
+                    flex-direction: row;
+                    transform: translateY(30px);
                     text-align: center;
-                    padding: 1%;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    padding: 3%;
+                    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+                        sans-serif;
                     border-radius: 22px;
                     background: linear-gradient(40deg, #50afff 0.03%, #162b4e 100.03%);
+                    .text {
+                        width: 90%;
+                    }
+                    .button {
+                        width: 10%;
+                       background: none;
+                        // background: red;
+                        color: white;
+                        font-size: 15px;
+                        border-radius: 7px;
+                        font-family: "Montserrat";
+
+                        width: 10%;
+                        height: 20px;
+                    }
                 }
                 .paragraph-Modal {
                     border-radius: 22px;
                     background: #ffffff;
-                    box-shadow: 0 0 20px 20px rgba(0, 0, 0, .2);
+                    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.2);
                     padding: 5%;
                     padding-bottom: 8%;
-                    p{
+                    p {
                         margin: auto;
                         margin-left: 7%;
                         color: black;
@@ -49,18 +67,17 @@
                 .Button-Modal {
                     padding: 6% 8% 0 2%;
                     button {
-                        background: red;
+                        // background: red;
                         color: #101429;
+                        font-size: 15px;
                         border-radius: 7px;
                         font-family: "Montserrat";
-                        
+
                         width: 10%;
                         height: 20px;
                     }
                 }
             }
-    
         }
     }
-
 }
