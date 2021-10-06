@@ -52,3 +52,32 @@
         }
     }
 }
+@media screen and (max-width: 1430px) {
+    .mainContainer1 {
+        margin-bottom: 100px;
+        .firstRow {
+            margin-left: auto;
+            margin-right: auto;
+            width: 30%;
+           
+            .firstTitle {
+                font-size: 20px;
+                color: orange;
+            }
+            .naranja {
+                color: orange;
+                font-size: 50px;
+            }
+        }
+
+        .secondRow {
+           height: auto;
+        }
+    }
+}
+@media screen and (max-width: 1266px) {
+    .mainContainer1 {
+        margin-bottom: 200px;
+      
+    }
+}

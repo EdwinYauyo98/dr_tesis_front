@@ -3,9 +3,8 @@
     display: flex;
     flex-direction: row;
     margin-top: 300px;
-   
+
     padding-left: 10%;
-   
 
     .leftContainer {
         width: 50%;
@@ -16,16 +15,16 @@
         .secondTitle {
             font-size: 75px;
             margin-bottom: 0%;
-            color: #191A36;
+            color: #191a36;
         }
         .thirdTitle {
             margin-top: 0%;
             font-size: 75px;
-            color: #EA8400;
+            color: #ea8400;
         }
     }
     .rightContainer {
-        color: #191A36;
+        color: #191a36;
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -54,6 +53,136 @@
             height: 50px;
             color: #191a36;
             font-size: 9px;
+        }
+    }
+}
+@media screen and (max-width: 1920px) {
+    .FaqsFirstCompContainer {
+        .leftContainer {
+            .firstTitle {
+                font-size: 20px;
+                transition: 0.5s;
+            }
+            .secondTitle {
+                font-size: 70px;
+                transition: 0.5s;
+            }
+            .thirdTitle {
+                font-size: 70px;
+                transition: 0.5s;
+            }
+        }
+        .rightContainer {
+            .content {
+                font-size: 30px;
+                transition: 0.5s;
+            }
+            .firstButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
+            .secondButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+@media screen and (max-width: 1735px) {
+    .FaqsFirstCompContainer {
+        .leftContainer {
+            .firstTitle {
+                font-size: 20px;
+                transition: 0.5s;
+            }
+            .secondTitle {
+                font-size: 70px;
+                transition: 0.5s;
+            }
+            .thirdTitle {
+                font-size: 70px;
+                transition: 0.5s;
+            }
+        }
+        .rightContainer {
+            .content {
+                font-size: 30px;
+                transition: 0.5s;
+            }
+            .firstButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
+            .secondButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .FaqsFirstCompContainer {
+        .leftContainer {
+            .firstTitle {
+                font-size: 15px;
+                transition: 0.5s;
+            }
+            .secondTitle {
+                font-size: 65px;
+                transition: 0.5s;
+            }
+            .thirdTitle {
+                font-size: 65px;
+                transition: 0.5s;
+            }
+        }
+        .rightContainer {
+            .content {
+                font-size: 25px;
+                transition: 0.5s;
+            }
+            .firstButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
+            .secondButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1455px) {
+    .FaqsFirstCompContainer {
+        .leftContainer {
+            .firstTitle {
+                font-size: 10px;
+                transition: 0.5s;
+            }
+            .secondTitle {
+                font-size: 60px;
+                transition: 0.5s;
+            }
+            .thirdTitle {
+                font-size: 60px;
+                transition: 0.5s;
+            }
+        }
+        .rightContainer {
+            .content {
+                font-size: 20px;
+                transition: 0.5s;
+            }
+            .firstButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
+            .secondButton {
+                font-size: 7px;
+                transition: 0.5s;
+            }
         }
     }
 }
