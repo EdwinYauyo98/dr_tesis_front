@@ -1,0 +1,48 @@
+.whoIsContainer {
+    margin-top: 100px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    align-self: center;
+
+    .leftContainer {
+        width: 30%;
+        // background-color: blueviolet;
+        padding: 5%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .firstTitle {
+            color: #191a36;
+           
+        }
+        .secondTitle {
+            color: #191a36;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .content {
+        }
+        .buttonBlack {
+            width: 282px;
+            height: 64px;
+            text-align: center;
+            border-radius: 15px;
+            font-size: 10px;
+            background-color: #191A36;
+            color: white;
+        }
+    }
+    .rightContainer {
+        width: 70%;
+        // background-color: brown;
+        padding: 5%;
+
+        .imgRight {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
