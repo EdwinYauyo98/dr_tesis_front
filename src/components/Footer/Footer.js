@@ -12,13 +12,28 @@ import twitter from '../../assets/imgs/Footer/Twitter.svg';
 import youtube from '../../assets/imgs/Footer/Youtube.svg';
 import linkedin from '../../assets/imgs/Footer/linkedIn.svg';
 import map from '../../assets/imgs/Footer/map.png';
+import { useHistory } from 'react-router';
 
 export default function Footer(props) {
 
+    const history = useHistory();
+
     const socImgs = [fb, insta, linkedin, pinterest, spotify, twitter, youtube];
+    const routes = ["/services", "/resources", "news", "aboutus"];
+    const socLinks = [
+        "https://www.facebook.com/drtesis.edu.pe",
+        "https://www.instagram.com/drtesis.edu.pe/",
+        "https://www.linkedin.com/company/dr-tesis/",
+        "https://www.pinterest.es/",
+        "https://www.spotify.com/pe/",
+        "https://twitter.com/",
+        "https://www.youtube.com/"
+    ]
 
     const socMenu = props.data.socials.map((soc, index) =>
-        <div className="f-soc">
+        <div className="f-soc" onClick={() => {
+            window.open(socLinks[index])
+        }}>
             <img className="soc-img" src={socImgs[index]} alt="" />
             <div className="soc-txt">
                 {soc}
@@ -26,8 +41,11 @@ export default function Footer(props) {
         </div>
     );
 
-    const navMenu = props.data.nav.map(opt =>
-        <div className="f-nav-box">
+    const navMenu = props.data.nav.map((opt, index) =>
+        <div className="f-nav-box" onClick={() => {
+            history.push(routes[index]);
+            window.scrollTo(0, 0);
+        }}>
             {opt}
         </div>);
 

@@ -19,14 +19,19 @@
         }
     }
     .f-info-container{
-        display: flex;
-        flex-direction: row;
+        // display: flex;
+        // flex-direction: row;
         width: 100%;
+        .f-monkey-img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
         .f-info{
             display: flex;
             flex-direction: column;
             position: relative;
-            left: 26.9%;
+            right: 0;
             .f-soc-map{
                 display: flex;
                 flex-direction: row;
@@ -51,7 +56,6 @@
                 .f-cont-box{
                     display: flex;
                     flex-direction: row;
-                    justify-content:baseline;
                     .cont-img-phone{
                         position: relative;
                         transform: translateY(-28%);
@@ -60,9 +64,14 @@
                         position: relative;
                         transform: translateY(-28%);
                     }
+                    .cont-img-mail{
+                        position: relative;
+                        transform: translateY(28%);
+                    }
                     .cont-txt{
                         font-family: "Montserrat";
                         color: #fff;
+                        
                     }
                 }    
             }
@@ -87,35 +96,32 @@
         }
         .f-info-container{
             .f-monkey-img{
-                position: absolute;
-                left: 0;
-                bottom: 0;
                 width: 32%;
             }
             .f-info{
-                
+                margin: 0 10% 0 26%;
                 .f-soc-map{
                     margin-top: 1%;
                     .f-soc{
-                        margin: 0 1.2%;
+                        margin: 0 1.1%;
                         .soc-img{
-                            height: 27%;
+                            height: 26%;
                         }
                         .soc-txt{
                             margin-top: 30%;
-                            font-size: 90%;
+                            font-size: 80%;
                             text-align: center;
                         }
                     }
                     .f-map{
                         width: 45%;
-                        margin-left: 11.5%;
+                        margin-left: 7%;
                     }
                 }
                 .f-cont{
-                    margin: 7% 0 9% 0;
+                    margin: 6% 0 9% 1%;
                     .f-cont-box{
-                        margin: 0 21% 0 2%;
+                        margin-right: 15%;
                         .cont-img-phone{
                             width: 30%;
                             height: auto;
@@ -127,12 +133,12 @@
                             margin-right: 6%;
                         }
                         .cont-img-mail{
-                            height: 55%;
+                            height: 50%;
                             width: auto;
                             margin-right: 10%;
                         }
                         .cont-txt{
-                            font-size: 150%;
+                            font-size: 180%;
                         }
                     }    
                 }
@@ -141,6 +147,138 @@
     
         .f-copyright-container{
             font-size: 115%;
+            padding: 1.3% 0 1.7% 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1750px){
+    .footer-container{
+        .f-nav-container{
+            margin: 3% 10%;
+            .f-nav-box{
+                font-size: 200%;
+            }
+        }
+        .f-info-container{
+            .f-monkey-img{
+                width: 32%;
+            }
+            .f-info{
+                margin: 0 10% 0 26%;
+                .f-soc-map{
+                    margin-top: 1%;
+                    .f-soc{
+                        margin: 0 0.5%;
+                        .soc-img{
+                            height: 24%;
+                        }
+                        .soc-txt{
+                            margin-top: 30%;
+                            font-size: 80%;
+                            text-align: center;
+                        }
+                    }
+                    .f-map{
+                        width: 37%;
+                        margin-left: 12.6%;
+                    }
+                }
+                .f-cont{
+                    margin: 4% 0 7% 1%;
+                    .f-cont-box{
+                        margin-right: 15%;
+                        .cont-img-phone{
+                            width: 30%;
+                            height: auto;
+                            margin-right: 10%;
+                        }
+                        .cont-img-house{
+                            width: 30%;
+                            height: auto;
+                            margin-right: 6%;
+                        }
+                        .cont-img-mail{
+                            height: 38%;
+                            width: auto;
+                            margin-right: 10%;
+                        }
+                        .cont-txt{
+                            font-size: 160%;
+                        }
+                    }    
+                }
+            }
+        }
+    
+        .f-copyright-container{
+            font-size: 110%;
+            padding: 1.3% 0 1.7% 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px){
+    .footer-container{
+        .f-nav-container{
+            margin: 3% 10%;
+            .f-nav-box{
+                font-size: 200%;
+            }
+        }
+        .f-info-container{
+            .f-monkey-img{
+                width: 32%;
+            }
+            .f-info{
+                margin: 0 10% 0 26%;
+                .f-soc-map{
+                    margin-top: 1%;
+                    .f-soc{
+                        margin: 0 0.5%;
+                        .soc-img{
+                            height: 24%;
+                        }
+                        .soc-txt{
+                            margin-top: 30%;
+                            font-size: 80%;
+                            text-align: center;
+                        }
+                    }
+                    .f-map{
+                        width: 37%;
+                        margin-left: 8.6%;
+                    }
+                }
+                .f-cont{
+                    margin: 4% 0 7% 1%;
+                    .f-cont-box{
+                        margin-right: 15%;
+                        .cont-img-phone{
+                            width: 30%;
+                            height: auto;
+                            margin-right: 10%;
+                        }
+                        .cont-img-house{
+                            width: 30%;
+                            height: auto;
+                            margin-right: 6%;
+                        }
+                        .cont-img-mail{
+                            height: 38%;
+                            width: auto;
+                            margin-right: 10%;
+                        }
+                        .cont-txt{
+                            font-size: 147%;
+                        }
+                    }    
+                }
+            }
+        }
+    
+        .f-copyright-container{
+            font-size: 100%;
             padding: 1.3% 0 1.7% 0;
         }
     }
@@ -156,17 +294,14 @@
         }
         .f-info-container{
             .f-monkey-img{
-                position: absolute;
-                left: 0;
-                bottom: 0;
                 width: 32%;
             }
             .f-info{
-                
+                margin: 0 10% 0 26%;
                 .f-soc-map{
                     margin-top: 1%;
                     .f-soc{
-                        margin: 0 0.8%;
+                        margin: 0 0.1%;
                         .soc-img{
                             height: 26%;
                         }
@@ -177,15 +312,14 @@
                         }
                     }
                     .f-map{
-                        width: 35%;
-                        margin-left: 10.3%;
+                        width: 36%;
+                        margin-left: 6.7%;
                     }
                 }
                 .f-cont{
-                    margin: 4% 0 6% 0;
+                    margin: 6% 0 9% 1%;
                     .f-cont-box{
-                        margin: 0 8.7% 0 3%;
-                        // padding: 0 2%;
+                        margin-right: 14%;
                         .cont-img-phone{
                             width: 30px;
                             height: auto;
