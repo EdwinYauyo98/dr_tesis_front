@@ -1,0 +1,91 @@
+.modal-container {
+    //position: fixed;
+    background: linear-gradient(90deg, #2e79af 0.03%, #1d3765 100.03%);
+    width: 100%;
+    height: auto;
+    margin-bottom: 5%;
+    .modal {
+        display: flex;
+        flex-direction: row;
+        .first-row {
+            img {
+                padding: 13% 15% 10% 15%;
+                width: 83%;
+            }
+        }
+        .second-row {
+            color: #ffffff;
+            font-family: "Montserrat";
+            font-weight: 500;
+            padding-top: 8%;
+            padding-left: 5%;
+            width: 40%;
+            .title {
+                font-size: 190%;
+            }
+            .paragraph {
+                margin-top: 5%;
+                font-size: 140%;
+            }
+            .button {
+                padding: 6% 8% 0 2%;
+                button {
+                    background: #ffffff;
+                    color: #101429;
+                    border-radius: 7px;
+                    font-size: 100%;
+                    font-style: normal;
+                    line-height: 34px;
+                    font-family: "Montserrat";
+                    font-weight: 500;
+                    box-shadow: #ffffff;
+                    border: #ffffff;
+                    width: 60%;
+                    height: 60px;
+                }
+            }
+        }
+        .third-row {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%;
+            padding-left: 5%;
+            padding: 5.5% 5% 10% 5%;
+            .name {
+                width: 70%;
+                height: 50px;
+                border-radius: 8px;
+                border: rgba(255, 255, 255, 0.2);
+                background: rgba(255, 255, 255, 0.2);
+            }
+            .lastname {
+                width: 70%;
+                height: 50px;
+                border-radius: 8px;
+                border: rgba(255, 255, 255, 0.2);
+                background: rgba(255, 255, 255, 0.2);
+            }
+            .email {
+                width: 90%;
+                height: 50px;
+                border-radius: 8px;
+                border: rgba(255, 255, 255, 0.2);
+                background: rgba(255, 255, 255, 0.2);
+            }
+            .cellphone {
+                width: 70%;
+                height: 50px;
+                border-radius: 8px;
+                border: rgba(255, 255, 255, 0.2);
+                background: rgba(255, 255, 255, 0.2);
+            }
+            
+            ::placeholder{
+                color: #E4DFDF;
+                padding-left: 7%;
+                font-family: 'Montserrat';
+            }
+        }
+    }
+}
