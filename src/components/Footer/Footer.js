@@ -23,11 +23,11 @@ export default function Footer(props) {
     const socLinks = [
         "https://www.facebook.com/drtesis.edu.pe",
         "https://www.instagram.com/drtesis.edu.pe/",
-        "https://www.linkedin.com/company/dr-tesis/",
-        "https://www.pinterest.es/",
-        "https://www.spotify.com/pe/",
-        "https://twitter.com/",
-        "https://www.youtube.com/"
+        "https://www.linkedin.com/company/dr-tesis",
+        "https://www.pinterest.com/drtesispe/",
+        "https://open.spotify.com/show/4FKClNOpg6KhXMrV6aMZGG?si=q9KWSXKgQUedDeR7P4nutQ",
+        "https://twitter.com/drtesispe",
+        "https://www.youtube.com/channel/UCq1ajX0IYNdZd99WvfhW73Q"
     ]
 
     const socMenu = props.data.socials.map((soc, index) =>
