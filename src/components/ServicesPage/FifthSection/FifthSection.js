@@ -1,7 +1,7 @@
 import './FifthSection.scss';
 export default function FifthSection(props) {
     return (
-        <div className='container'>
+        <div className='fifth-section-container'>
             <div className='first-container'>
                 <div className='container1'>
                     <div className='subtitle'>

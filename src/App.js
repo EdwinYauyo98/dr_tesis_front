@@ -3,6 +3,7 @@ import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import ResourcePage from "./pages/ResourcePage/ResourcePage";
 import NoticeAndEvents from "./pages/NoticeAndEvents/NoticeAndEvents";
 import AboutUs from "./pages/AboutUs/AboutUs";
+import Faqs from "./pages/Faqs/Faqs";
 import Footer from "./components/Footer/Footer";
 
 import Navigation from "./components/Nav-Bar/Navigation";
@@ -67,6 +68,13 @@ function App() {
           <Navigation data={NavData} openLangModal={OpenLangModal} />
           <Cotizacion />
           <ToolsLaders hb='500' hh='200'/>
+        </Route>
+
+        <Route path="/faqs" exact>
+          <Navigation data={NavData} openLangModal={OpenLangModal} />
+          <Faqs />
+          <ToolsLaders hb='500' hh='200'/>
+          <Footer data={FooterData}/>
         </Route>
 
         {openLangModal && <LangModal modalAction={OpenLangModal} data={LangModalJSON} />}

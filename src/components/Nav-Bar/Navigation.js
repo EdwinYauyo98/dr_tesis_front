@@ -22,7 +22,10 @@ export default function Navigation(props) {
 
                 <div className="right">
                     <img className="search" src={search} alt="serch" />
-                    <div className="support">
+                    <div className="support" onClick={() => {
+                        history.push("/faqs");
+                        window.scrollTo(0, 0);
+                    }}>
                         {props.data.features.support}
                     </div>
                     <div className="contact">
