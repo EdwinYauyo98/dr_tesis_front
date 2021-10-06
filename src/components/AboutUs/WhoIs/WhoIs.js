@@ -1,8 +1,9 @@
 import React from 'react'
 import './WhoIs.scss';
 import People from '../../../assets/imgs/AboutUs/people.png'
+import { useHistory } from "react-router-dom";
 export default function WhoIs() {
-
+    const history = useHistory();
     return (
 
         <div className="whoIsContainer">
@@ -11,7 +12,7 @@ export default function WhoIs() {
                     ACERCA DE NOSOTROS
                 </div>
                 <div className="secondTitle">
-                    ¿Quién es<br/> Dr. Tesis?
+                    ¿Quién es<br /> Dr. Tesis?
                 </div>
                 <div className="content">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam no
@@ -22,7 +23,10 @@ export default function WhoIs() {
                     velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
                     at vero eros et accum
                 </div>
-                <button className="buttonBlack"><h1>Solicita tu cotización</h1></button>
+                <button className="buttonBlack" onClick={() => {
+                    history.push("/form");
+                    window.scrollTo(0, 0);
+                }}><h1>Solicita tu cotización</h1></button>
             </div>
             <div className="rightContainer">
                 <img className="imgRight" src={People} alt="" />

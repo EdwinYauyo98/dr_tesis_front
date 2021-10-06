@@ -1,9 +1,9 @@
 import React from 'react'
 import './ResourcesPP.scss'
-export default function ResourcesPP() {
+export default function ResourcesPP(props) {
     return (
         <div>
-            <div className="resources-pp">
+            <div className="resources-pp" onPointerLeave={props.onPointerLeave}>
                 <div className="generalContainer">
                     <div className="left-item">
                         <div className="item">
@@ -18,9 +18,11 @@ export default function ResourcesPP() {
                         <div className="item">
                             <div className="title-item">Centros</div>
                             <div className="subtitle-item">Sala de estudios</div>
-                            <div className="content-item">Artículos, videos, historias y</div>
-                            <div className="content-item">noticias sobre Canvas,</div>
-                            <div className="content-item">tecnología educativa y educación</div>
+                            <div className="content-item">Artículos, videos, historias y
+                                noticias sobre Canvas,
+                                tecnología educativa y educación</div>
+                            {/* <div className="content-item">noticias sobre Canvas,</div>
+                            <div className="content-item">tecnología educativa y educación</div> */}
 
                             <div className="subtitle-item">Nuestra Comunidad</div>
                             <div className="content-item">Comparta ideas, haga y responda</div>

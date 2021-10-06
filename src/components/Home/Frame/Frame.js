@@ -1,6 +1,8 @@
 import React from 'react';
 import './Frame.scss';
+import { useHistory } from "react-router-dom";
 export default function Frame(props) {
+    const history = useHistory();
     return (
         <div className='frame-container'>
             <p>LOREM IPSUM DOLOR SIT AMET, CONSECTETUER ADIPISCING ELIT, SED DIAM NONUMMY NIBH
@@ -20,7 +22,10 @@ export default function Frame(props) {
                 IRIURE DOLOR IN HENDRERIT IN VULPUTATE VELIT ESSE MOLESTIE CONSEQUAT, VEL ILLUM
                 DOLORE EU FEUGIAT NULLA FACILISIS AT VERO EROS ET ACCUMSAN ET IUSTO ODIO DIGNISSIM
                 QUI BLANDIT PRAESENT LUPTATUM ZZRIL DELENIT AUGUE DUIS DOLORE TE FEUGAIT NULLA </p>
-            <div className='button'>
+            <div className='button' onClick={() => {
+                history.push("/form");
+                window.scrollTo(0, 0);
+            }}>
                 <button>Solicita tu cotización</button>
             </div>
         </div>

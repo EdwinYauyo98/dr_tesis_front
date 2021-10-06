@@ -13,8 +13,8 @@ import FooterData from "./components/Footer/FooterData.json";
 
 import LangModal from "./components/LangModal/LangModal";
 import LangModalJSON from './components/LangModal/LangModal.json';
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import ToolsLaders from "./components/ToolsLadders/ToolsLaders";
 
 import {
@@ -24,62 +24,94 @@ import {
 } from "react-router-dom";
 
 
+import CotizacionModal from '../src/components/CotizacionModal/CotizacionModal'
 
 // import Cotizacion from "./pages/Cotizacion/Cotizacion";
 
 function App() {
   const [openLangModal, setOpenLangModal] = useState(false);
+  const [openCotModal, setOpenCotModal] = useState(false);
+  const [count, setCount] = useState(0);
+
   function OpenLangModal() {
     setOpenLangModal(!openLangModal);
   }
+
+  function OpenCotModal() {
+    setOpenCotModal(true);
+  }
+
+  function CloseCotModal() {
+    setOpenCotModal(false);
+
+  }
+
+  useEffect(() => {
+    let intervalId;
+    if (!openCotModal) {
+      intervalId = setInterval(() => {
+        setCount(count + 1);
+      }, 1000);
+    }
+    if (count >= 40) {
+      OpenCotModal();
+      setCount(0);
+    }
+    return () => clearInterval(intervalId);
+  }, [count, openCotModal]);
+
+
   return (
     <Router>
       <div >
         <Route path="/" exact>
-          <Navigation data={NavData} openLangModal={OpenLangModal} />
+          <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
           <Home />
-          <ToolsLaders hb='500' hh='1500'/>
-          <Footer data={FooterData}/>
+          <ToolsLaders hb='500' hh='1500' />
+          <Footer data={FooterData} />
+          {/* <StateModal></StateModal> */}
         </Route>
         <Route path="/services" exact>
-          <Navigation data={NavData} openLangModal={OpenLangModal} />
+          <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
           <ServicesPage />
-          <ToolsLaders hb='500' hh='200'/>
-          <Footer data={FooterData}/>
+          <ToolsLaders hb='500' hh='200' />
+          <Footer data={FooterData} />
         </Route>
         <Route path="/resources" exact>
           <ResourcePage />
-          <Footer data={FooterData}/>
+          <Footer data={FooterData} />
         </Route>
         <Route path="/news" exact>
-          <Navigation data={NavData} openLangModal={OpenLangModal} />
+          <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
           <NoticeAndEvents />
-          <ToolsLaders hb='500' hh='200'/>
-          <Footer data={FooterData}/>
+          <ToolsLaders hb='500' hh='200' />
+          <Footer data={FooterData} />
         </Route>
         <Route path="/aboutus" exact>
-          <Navigation data={NavData} openLangModal={OpenLangModal} />
+          <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
           <AboutUs />
-          <ToolsLaders hb='500' hh='200'/>
-          <Footer data={FooterData}/>
+          <ToolsLaders hb='500' hh='200' />
+          <Footer data={FooterData} />
         </Route>
 
         <Route path="/form" exact>
-          <Navigation data={NavData} openLangModal={OpenLangModal} />
+          <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
           <Cotizacion />
-          <ToolsLaders hb='500' hh='200'/>
+          <ToolsLaders hb='500' hh='200' />
         </Route>
 
         <Route path="/faqs" exact>
-          <Navigation data={NavData} openLangModal={OpenLangModal} />
+          <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
           <Faqs />
-          <ToolsLaders hb='500' hh='200'/>
-          <Footer data={FooterData}/>
+          <ToolsLaders hb='500' hh='200' />
+          <Footer data={FooterData} />
         </Route>
+
+        {openCotModal && <CotizacionModal closeModal={CloseCotModal} />}
 
         {openLangModal && <LangModal modalAction={OpenLangModal} data={LangModalJSON} />}
       </div>
-    </Router>     
+    </Router>
   );
 }
 

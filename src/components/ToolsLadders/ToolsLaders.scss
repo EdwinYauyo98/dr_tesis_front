@@ -1,14 +1,16 @@
-.tools-lader-container-dynamic{
+.tools-lader-container-dynamic {
     z-index: 100;
     width: 100%;
     bottom: 0;
     position: fixed;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
-    
-    .leftBtn{
+    pointer-events: none;
+
+    .leftBtn {
         transform: scale(0.7);
+        pointer-events: all;
         // padding-left: 1%;
         .text {
             margin: auto;
@@ -18,41 +20,40 @@
             font-weight: 800;
             font-size: 150%;
         }
-
     }
-    .leftBtn:hover{
+    .leftBtn:hover {
         cursor: pointer;
     }
 
-    .rightBtn{
+    .rightBtn {
         transform: scale(0.7);
         margin: 0;
         // padding-right: 1%;
         margin-bottom: -7%;
+        pointer-events: all;
     }
 
-    .rightBtn:hover{
+    .rightBtn:hover {
         cursor: pointer;
     }
 }
 
-.tools-lader-container-static{
+.tools-lader-container-static {
     z-index: 100;
     width: 100%;
     bottom: 0;
     position: fixed;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: right;
 
-
-    .rightBtn{
+    .rightBtn {
         transform: scale(0.7);
         margin: 0;
         margin-bottom: 2.05%;
     }
 
-    .rightBtn:hover{
+    .rightBtn:hover {
         cursor: pointer;
     }
 }

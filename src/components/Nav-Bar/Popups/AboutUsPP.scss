@@ -1,0 +1,38 @@
+.about-us-pp{
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: -1px;
+    width: max-content;
+    height: auto;
+    z-index: 5;
+    filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.7));
+    border-radius: 0 8px 8px 8px;
+    transform: translateY(calc(100% + 3px));
+    padding: 10%;
+    .title-item {
+        text-align: left;
+        font-size: 85%;
+        font-weight: 500;
+        color: #ffc700;
+    }
+    .content-item {
+        text-align: left;
+        font-size: 60%;
+        font-weight: 500;
+    }
+
+    .contact-btn {
+        margin-top: 12%;
+        text-align: left;
+        font-size: 85%;
+        font-weight: 500;
+        color: #ffc700;
+    }
+    .contact-btn:hover {
+        text-decoration: underline;
+    }
+}
+.services-pp:hover {
+    cursor: auto;
+}

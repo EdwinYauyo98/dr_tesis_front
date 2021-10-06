@@ -1,9 +1,9 @@
 import React from 'react'
 import './ServicesPP.scss'
-export default function ServicesPP() {
+export default function ServicesPP(props) {
     return (
         <div>
-            <div className="services-pp">
+            <div className="services-pp" onPointerLeave={props.onPointerLeave}>
                 <div className="title">Tesis/ Plan de tesis/ Modelo de negocio</div>
                 <div className="parent-item">
                     <div className="item">

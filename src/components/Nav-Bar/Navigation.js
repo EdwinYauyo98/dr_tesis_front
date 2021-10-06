@@ -7,11 +7,14 @@ import { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import ServicesPP from './Popups/ServicesPP'
 import ResourcesPP from './Popups/ResourcesPP'
-
+import NewsPP from './Popups/NewsPP'
+import AboutUsPP from './Popups/AboutUsPP'
 export default function Navigation(props) {
 
-    const [openBox, setStateBox] = useState(false);
+    const [openBoxId, setStateBox] = useState(0);
     const history = useHistory();
+    const ids = [0, 1, 2, 3, 4];
+
     return (
         <div className="nav-container">
             <div className="features">
@@ -28,7 +31,7 @@ export default function Navigation(props) {
                     }}>
                         {props.data.features.support}
                     </div>
-                    <div className="contact">
+                    <div className="contact" onClick={props.openCotModal}>
                         {props.data.features.contact}
                     </div>
                     <button className="login-btn">
@@ -49,9 +52,15 @@ export default function Navigation(props) {
                     <button className="nav-g-btn" onClick={() => {
                         history.push("/services");
                         window.scrollTo(0, 0);
-                    }}>
-                        <div className="text">{props.data.navigation.service}</div>
-                        {/* <ServicesPP></ServicesPP> */}
+                    }}
+                        onPointerEnter={() => {
+                            setStateBox(ids[1]);
+                        }}
+                        onPointerLeave={() => {
+                            setStateBox(ids[0]);
+                        }}>
+                        {props.data.navigation.service}
+                        {openBoxId === 1 && <ServicesPP />}
                     </button>
                 </div>
 
@@ -61,23 +70,43 @@ export default function Navigation(props) {
                 <button className="nav-g-btn" onClick={() => {
                     history.push("/resources");
                     window.scrollTo(0, 0);
-                }}>
+                }}
+                    onPointerEnter={() => {
+                        setStateBox(ids[2])
+                    }}
+                    onPointerLeave={() => {
+                        setStateBox(ids[0]);
+                    }}>
                     {props.data.navigation.resources}
-                    {/* <ResourcesPP></ResourcesPP> */}
+                    {openBoxId === 2 && <ResourcesPP />}
                 </button>
 
                 <button className="nav-g-btn" onClick={() => {
                     history.push("/news");
                     window.scrollTo(0, 0);
-                }}>
+                }}
+                    onPointerEnter={() => {
+                        setStateBox(ids[3])
+                    }}
+                    onPointerLeave={() => {
+                        setStateBox(ids[0]);
+                    }}>
                     {props.data.navigation.news}
+                    {openBoxId === 3 && <NewsPP />}
                 </button>
 
                 <button className="nav-g-btn" onClick={() => {
                     history.push("/aboutus");
                     window.scrollTo(0, 0);
-                }}>
+                }}
+                    onPointerEnter={() => {
+                        setStateBox(ids[4])
+                    }}
+                    onPointerLeave={() => {
+                        setStateBox(ids[0]);
+                    }}>
                     {props.data.navigation.aboutus}
+                    {openBoxId === 4 && <AboutUsPP />}
                 </button>
 
                 <button className="nav-btn" onClick={() => {

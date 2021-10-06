@@ -1,0 +1,30 @@
+.news-pp {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: -1px;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.7));
+    border-radius: 0 8px 8px 8px;
+    transform: translateY(calc(100% + 3px));
+    padding: 10%;
+    .title-item {
+        align-self: flex-start;
+        font-size: 85%;
+        font-weight: 500;
+        color: #ffc700;
+        margin-bottom: 12%;
+    }
+    .content-item {
+        
+        text-align: left;
+        // align-self: flex-start;
+        font-size: 80%;
+        font-weight: 800;
+    }
+}
+.services-pp:hover {
+    cursor: auto;
+}
