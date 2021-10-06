@@ -1,0 +1,59 @@
+.FaqsFirstCompContainer {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 300px;
+   
+    padding-left: 10%;
+   
+
+    .leftContainer {
+        width: 50%;
+
+        .firstTitle {
+            font-size: 25px;
+        }
+        .secondTitle {
+            font-size: 75px;
+            margin-bottom: 0%;
+            color: #191A36;
+        }
+        .thirdTitle {
+            margin-top: 0%;
+            font-size: 75px;
+            color: #EA8400;
+        }
+    }
+    .rightContainer {
+        color: #191A36;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .content {
+            text-align: left;
+            width: 75%;
+            font-size: 35px;
+        }
+        .firstButton {
+            border-radius: 20px;
+            background-image: linear-gradient(35deg, #0690e2 0, #07568c 50%, #01233e 100%);
+            border: none;
+            width: 35%;
+            height: 50px;
+            color: white;
+            font-size: 9px;
+        }
+        .secondButton {
+            border-radius: 20px;
+            background-color: white;
+            border-color: #191a36;
+            border-width: 1px;
+            width: 35%;
+            height: 50px;
+            color: #191a36;
+            font-size: 9px;
+        }
+    }
+}

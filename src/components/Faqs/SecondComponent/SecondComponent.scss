@@ -1,0 +1,26 @@
+.FaqsSecondComponent {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    width: auto;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    .firstSubComp {
+        color: #191A36;
+        width: 65%;
+        font-size: 30px;
+        .littleTitle{
+            font-size: 25px;
+        }
+        .title {
+            color: #EA8400;
+            font-size: 50px;
+        }
+        .indent{
+            text-indent: 35px;
+        }
+        .indentRight{
+            padding-left: 80px;
+        }
+    }
+}
