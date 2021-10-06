@@ -12,7 +12,7 @@ import frameimg7 from "../../../assets/imgs/ResourcePage/middleSection/img7.png"
 export default function MiddleSection(props){
     return(
         <div className="middle-container">
-            <div className="middle-title">
+            <div className="middle-title" id="guides">
                 {props.data.middletitle}
             </div>
             <div className="big-info-frames">
@@ -29,7 +29,7 @@ export default function MiddleSection(props){
                     </div>
                 </div>
             </div>
-            <div className="small-info-frames">
+            <div className="small-info-frames"  id="assesory">
                 <div className="small-frame">
                     <img className="frame-img-s" src={frameimg3} alt=""/>
                     <div className="frame-title-small">
@@ -49,7 +49,7 @@ export default function MiddleSection(props){
                     </div>
                 </div>
             </div>
-            <div className="middle-title">
+            <div className="middle-title" id="news">
                 {props.data.bottomtitle}
             </div>
             <div className="big-info-frames">

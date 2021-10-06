@@ -4,6 +4,7 @@ import returnArrow from '../../../assets/imgs/returnArrow.svg'
 import lens from '../../../assets/imgs/search.svg'
 
 import { useHistory } from 'react-router';
+import { Link } from 'react-scroll';
 
 export default function ResourceNav(props) {
 
@@ -32,12 +33,12 @@ export default function ResourceNav(props) {
             <div className="features-menu">
                 <div className="feature">{props.data.features.home}</div>
                 <div className="feature">{props.data.features.turniting}</div>
-                <div className="feature">{props.data.features.articles}</div>
-                <div className="feature">{props.data.features.eg}</div>
-                <div className="feature">{props.data.features.advisory}</div>
-                <div className="feature">{props.data.features.news}</div>
+                <div className="feature"><Link  to="article" spy={true} smooth={true}>{props.data.features.articles}</Link></div>
+                <div className="feature"><Link  to="guides" spy={true} smooth={true}>{props.data.features.eg}</Link></div>
+                <div className="feature"><Link  to="assesory" spy={true} smooth={true}>{props.data.features.advisory}</Link></div>
+                <div className="feature"><Link  to="news" spy={true} smooth={true}>{props.data.features.news}</Link></div>
                 <div className="feature">{props.data.features.search}</div>
-                <img className="lens" src={lens} alt=""/>
+                <img className="lens" src={lens} alt="" />
             </div>
         </div>
     );
