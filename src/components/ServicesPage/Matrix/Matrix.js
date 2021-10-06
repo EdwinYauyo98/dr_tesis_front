@@ -1,14 +1,14 @@
 import './Matrix.scss';
 export default function Matrix(props) {
     return (
-        <div className='matrix-container'>
+        <div className='matrix-container'  id="services-1">
             <div className='p1-container'>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit
             </div>
             <div className='title-container'>
                 SEDHUTVHMDWAK
             </div>
-            <div className='p2-container'>
+            <div className='p2-container' >
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                 nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
                 enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis

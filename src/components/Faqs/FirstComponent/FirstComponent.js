@@ -2,7 +2,7 @@ import React from 'react'
 import './FirstComponent.scss'
 export default function FirstComponent() {
     return (
-        <div className="FaqsFirstCompContainer">
+        <div className="FaqsFirstCompContainer" id="faqs">
             <div className="leftContainer">
                 <h3 className="firstTitle">SOPORTE AUTOSERVICIO DE DR.TESIS</h3>
                 <h1 className="secondTitle"> Preguntas<br /> frecuentes de</h1>

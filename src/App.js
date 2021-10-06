@@ -66,7 +66,7 @@ function App() {
       <div >
         <Route path="/" exact>
           <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
-          <Home />
+          <Home id="home"/>
           <ToolsLaders hb='500' hh='1500' />
           <Footer data={FooterData} />
           {/* <StateModal></StateModal> */}
@@ -107,7 +107,7 @@ function App() {
           <Footer data={FooterData} />
         </Route>
 
-        {openCotModal && <CotizacionModal closeModal={CloseCotModal} />}
+        {/* {openCotModal && <CotizacionModal closeModal={CloseCotModal} />} */}
 
         {openLangModal && <LangModal modalAction={OpenLangModal} data={LangModalJSON} />}
       </div>

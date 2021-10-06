@@ -5,10 +5,10 @@
     left: -1px;
     width: max-content;
     height: auto;
-    z-index: 5;
+    z-index: 60;
     filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.7));
     border-radius: 0 8px 8px 8px;
-    transform: translateY(calc(100% + 3px));
+    transform: translateY(calc(100% + 2px));
     padding: 10%;
     .title {
         font-size: 100%;
@@ -28,6 +28,7 @@
                 font-size: 85%;
                 font-weight: 500;
                 color: #FFC700;
+                pointer-events: all;
             }
             .content-item{
                 align-self: flex-start;

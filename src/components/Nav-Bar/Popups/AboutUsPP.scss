@@ -8,7 +8,7 @@
     z-index: 5;
     filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.7));
     border-radius: 0 8px 8px 8px;
-    transform: translateY(calc(100% + 3px));
+    transform: translateY(calc(100% + 2px));
     padding: 10%;
     .title-item {
         text-align: left;
@@ -33,6 +33,6 @@
         text-decoration: underline;
     }
 }
-.services-pp:hover {
+.about-us-pp:hover {
     cursor: auto;
 }

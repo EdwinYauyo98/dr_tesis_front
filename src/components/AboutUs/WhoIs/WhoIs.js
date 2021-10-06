@@ -6,7 +6,7 @@ export default function WhoIs() {
     const history = useHistory();
     return (
 
-        <div className="whoIsContainer">
+        <div className="whoIsContainer" id="about-1">
             <div className="leftContainer">
                 <div className="firstTitle">
                     ACERCA DE NOSOTROS

@@ -9,6 +9,7 @@ import ServicesPP from './Popups/ServicesPP'
 import ResourcesPP from './Popups/ResourcesPP'
 import NewsPP from './Popups/NewsPP'
 import AboutUsPP from './Popups/AboutUsPP'
+import { animateScroll as scroll } from 'react-scroll'
 export default function Navigation(props) {
 
     const [openBoxId, setStateBox] = useState(0);
@@ -29,6 +30,7 @@ export default function Navigation(props) {
                         history.push("/faqs");
                         window.scrollTo(0, 0);
                     }}>
+                        {/* <Link to="faqs" spy={true} smooth={true} offset={0}>{props.data.features.support}</Link> */}
                         {props.data.features.support}
                     </div>
                     <div className="contact" onClick={props.openCotModal}>
@@ -49,17 +51,17 @@ export default function Navigation(props) {
                 }} />
 
                 <div>
-                    <button className="nav-g-btn" onClick={() => {
-                        history.push("/services");
-                        window.scrollTo(0, 0);
-                    }}
+                    <button className="nav-g-btn"
                         onPointerEnter={() => {
                             setStateBox(ids[1]);
                         }}
                         onPointerLeave={() => {
                             setStateBox(ids[0]);
                         }}>
-                        {props.data.navigation.service}
+                        <div onClick={() => {
+                            history.push("/services");
+                            window.scrollTo(0, 0);
+                        }}>{props.data.navigation.service}</div>
                         {openBoxId === 1 && <ServicesPP />}
                     </button>
                 </div>
@@ -67,45 +69,45 @@ export default function Navigation(props) {
 
 
 
-                <button className="nav-g-btn" onClick={() => {
-                    history.push("/resources");
-                    window.scrollTo(0, 0);
-                }}
+                <button className="nav-g-btn"
                     onPointerEnter={() => {
                         setStateBox(ids[2])
                     }}
                     onPointerLeave={() => {
                         setStateBox(ids[0]);
                     }}>
-                    {props.data.navigation.resources}
+                    <div onClick={() => {
+                        history.push("/resources");
+                        window.scrollTo(0, 0);
+                    }}>{props.data.navigation.resources}</div>
                     {openBoxId === 2 && <ResourcesPP />}
                 </button>
 
-                <button className="nav-g-btn" onClick={() => {
-                    history.push("/news");
-                    window.scrollTo(0, 0);
-                }}
+                <button className="nav-g-btn"
                     onPointerEnter={() => {
                         setStateBox(ids[3])
                     }}
                     onPointerLeave={() => {
                         setStateBox(ids[0]);
                     }}>
-                    {props.data.navigation.news}
+                    <div onClick={() => {
+                        history.push("/news");
+                        window.scrollTo(0, 0);
+                    }}>{props.data.navigation.news}</div>
                     {openBoxId === 3 && <NewsPP />}
                 </button>
 
-                <button className="nav-g-btn" onClick={() => {
-                    history.push("/aboutus");
-                    window.scrollTo(0, 0);
-                }}
+                <button className="nav-g-btn" 
                     onPointerEnter={() => {
                         setStateBox(ids[4])
                     }}
                     onPointerLeave={() => {
                         setStateBox(ids[0]);
                     }}>
-                    {props.data.navigation.aboutus}
+                    <div onClick={() => {
+                        history.push("/aboutus");
+                        window.scrollTo(0, 0);
+                    }}>{props.data.navigation.aboutus}</div>
                     {openBoxId === 4 && <AboutUsPP />}
                 </button>
 

@@ -10,7 +10,7 @@ export default function SixthSection(props) {
         </div>)
 
     return (
-        <div className="mainContainer">
+        <div className="mainContainer"  id="services-5">
             <h1 className="firstTitle">{props.data.t1}</h1>
             <h1 className="secondTitle">
                 {props.data.t2[1]}<br />{props.data.t2[2]}<br />{props.data.t2[3]}

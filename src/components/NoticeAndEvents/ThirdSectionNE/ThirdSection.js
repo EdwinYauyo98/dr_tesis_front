@@ -3,7 +3,7 @@ import GirlBooks from '../../../assets/imgs/NoticeAndEvents/ThirdSectionNE/GirlB
 import '../ThirdSectionNE/ThirdSection.scss'
 export default function ThirdSection(props){
     return(
-       <div className="Container-NoticeAndEvents-ThirdSection">
+       <div className="Container-NoticeAndEvents-ThirdSection" id='news-3'>
            <div className="Box-Image">
                 <img id="img" src={GirlBooks}></img>
            </div>

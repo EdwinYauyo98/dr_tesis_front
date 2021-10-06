@@ -7,7 +7,7 @@ import '../FourSectionNE/FourSection.scss'
 export default function FourSection(props){
     return(
 
-        <div className="Container-NoticeAndEvents-FourSection">
+        <div className="Container-NoticeAndEvents-FourSection" id='news-4'>
             <h1>{props.data.tittle}</h1>
             <div className="Parent-Box">
                 <div className="Box">
