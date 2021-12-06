@@ -81,7 +81,7 @@ function App() {
         <Route path="/services" exact>
           <Navigation data={NavData} openLangModal={OpenLangModal} openCotModal={OpenCotModal} />
           <ServicesPage />
-          <ToolsLaders hb='500' hh='200' />
+          <ToolsLaders hb='500' hh='300' />
           <Footer data={FooterData} />
         </Route>
         <Route path="/resources" exact>
